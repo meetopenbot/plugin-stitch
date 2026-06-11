@@ -1,6 +1,6 @@
 {
   "name": "@meetopenbot/stitch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "description": "Stitch agent plugin for OpenBot",
   "main": "./dist/index.js",

@@ -72,6 +72,12 @@ const plugin = definePlugin({
           await persistProjectId(ctx.state.channelId, context.storage, project.id);
         }
 
+        yield agentOutput({
+          agentId: context.agentId,
+          content: `Generating a screen in project \`${project.id}\`.`,
+          threadId,
+        });
+
         const screen: Screen = await project.generate(prompt);
 
         const [imageUrl, htmlUrl] = await Promise.all([

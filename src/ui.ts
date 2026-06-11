@@ -23,6 +23,10 @@ export const buildScreenWidget = (
       kind: "message",
       widgetId: `stitch_screen_${screen.screenId}`,
       title: "Screen generated",
+      media: {
+        type: "image",
+        url: screen.imageUrl ?? "",
+      },
       metadata: {
         type: "stitch_screen",
         screenId: screen.screenId,
